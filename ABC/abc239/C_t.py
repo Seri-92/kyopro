@@ -14,3 +14,14 @@ def lmi(): return list(mi())
 def ls(): return list(input())
 def li(): return list(map(int, str(input())))
 
+a, b, c, d = mi()
+
+def kouho_set(x, y):
+    set_ = {(x+1, y+2), (x+1, y-2), (x-1, y+2), (x-1, y-2),
+            (x+2, y+1), (x+2, y-1), (x-2, y+1), (x-2, y-1)}
+    return set_
+
+if kouho_set(a, b) & kouho_set(c, d):
+    print('Yes')
+else:
+    print('No')

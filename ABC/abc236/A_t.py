@@ -13,17 +13,12 @@ def mi(): return map(int, input().split())
 def lmi(): return list(mi())
 def li(): return list(input())
 
-n, k = mi()
-P = lmi()
+s = list(input())
 
-list_ = P[:k]
-list_.sort()
-print(list_[0])
+a, b = mi()
+a -= 1
+b -= 1
 
-for i in range(k, n):
-    x = P[i]
-    heappush(list_, x)
-    heappop(list_)
-    print(list_[0])
+s[a], s[b] = s[b], s[a]
 
-
+print(''.join(s))

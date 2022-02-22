@@ -13,17 +13,13 @@ def mi(): return map(int, input().split())
 def lmi(): return list(mi())
 def li(): return list(input())
 
-n, k = mi()
-P = lmi()
+n = int(input())
+H = lmi()
 
-list_ = P[:k]
-list_.sort()
-print(list_[0])
+for i in range(n-1):
+    x, y = H[i], H[i+1]
+    if x >= y:
+        print(x)
+        exit()
 
-for i in range(k, n):
-    x = P[i]
-    heappush(list_, x)
-    heappop(list_)
-    print(list_[0])
-
-
+print(H[-1])

@@ -13,17 +13,23 @@ def mi(): return map(int, input().split())
 def lmi(): return list(mi())
 def li(): return list(input())
 
-n, k = mi()
-P = lmi()
+n, q = mi()
+A = lmi()
+dict_ = dict()
+for i in range(n):
+    a = A[i]
+    if a not in dict_:
+        dict_[a] = [i]
+    else:
+        dict_[a].append(i)
 
-list_ = P[:k]
-list_.sort()
-print(list_[0])
 
-for i in range(k, n):
-    x = P[i]
-    heappush(list_, x)
-    heappop(list_)
-    print(list_[0])
-
+for i in range(q):
+    x, k = mi()
+    if x not in dict_:
+        print(-1)
+    elif len(dict_[x]) < k:
+        print(-1)
+    else:
+        print(dict_[x][k - 1] + 1)
 

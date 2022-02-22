@@ -13,17 +13,15 @@ def mi(): return map(int, input().split())
 def lmi(): return list(mi())
 def li(): return list(input())
 
-n, k = mi()
-P = lmi()
+n = ii()
+A = lmi()
 
-list_ = P[:k]
-list_.sort()
-print(list_[0])
+dict_ = defaultdict(int)
+for i in range(4 * n - 1):
+    x = A[i]
+    dict_[x] += 1
 
-for i in range(k, n):
-    x = P[i]
-    heappush(list_, x)
-    heappop(list_)
-    print(list_[0])
-
-
+for i in range(1, n+1):
+    if dict_[i] != 4:
+        print(i)
+        exit()

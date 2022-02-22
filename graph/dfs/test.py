@@ -4,6 +4,8 @@ seen = [0] * len(G)
 todo = [1]
 root = []
 
+seen[1] = 1
+
 while todo:
     v = todo.pop()
     root.append(v)
@@ -11,5 +13,6 @@ while todo:
         if not seen[w]:
             todo.append(w)
             seen[w] = 1
+        root.append(v)
 
 print(root)

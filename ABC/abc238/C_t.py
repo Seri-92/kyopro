@@ -6,24 +6,24 @@ import math
 import bisect
 
 sys.setrecursionlimit(10**7)
-mod = 1000000007
+# mod = 1000000007
+mod = 998244353
 
 def ii(): return int(input())
 def mi(): return map(int, input().split())
 def lmi(): return list(mi())
 def li(): return list(input())
 
-n, k = mi()
-P = lmi()
+n = ii()
+len_n = len(str(n))
+ans = 0
+for i in range(len_n - 1):
+    ans += (1 + 9 * 10 ** i) * 9 * 10 ** i // 2
+    ans %= mod
 
-list_ = P[:k]
-list_.sort()
-print(list_[0])
+m = n - (10 ** (len_n - 1) - 1)
 
-for i in range(k, n):
-    x = P[i]
-    heappush(list_, x)
-    heappop(list_)
-    print(list_[0])
+ans += (1 + m) * m // 2
+ans %= mod
 
-
+print(ans)

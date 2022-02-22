@@ -13,17 +13,15 @@ def mi(): return map(int, input().split())
 def lmi(): return list(mi())
 def li(): return list(input())
 
-n, k = mi()
-P = lmi()
+h, w = mi()
 
-list_ = P[:k]
-list_.sort()
-print(list_[0])
+A = [lmi() for _ in range(h)]
 
-for i in range(k, n):
-    x = P[i]
-    heappush(list_, x)
-    heappop(list_)
-    print(list_[0])
+B = [[0] * h for _ in range(w)]
 
+for i in range(w):
+    for j in range(h):
+        B[i][j] = A[j][i]
 
+for i in range(w):
+    print(*B[i])
