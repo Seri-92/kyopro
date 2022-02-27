@@ -3,7 +3,8 @@ from heapq import heappush, heappop, heapify
 from itertools import permutations, combinations, accumulate
 import sys
 import math
-import bisect
+from bisect import bisect_left, bisect_right, insort
+from typing import Generic, Iterable, Iterator, TypeVar, Union, List
 
 # sys.setrecursionlimit(10**7)
 # mod = 1000000007
