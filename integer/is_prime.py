@@ -9,5 +9,5 @@ def isPrime(n):
     return True
 
 n = int(input())    
-print('YES' if isPrime(n) else 'NO')
+print('Yes' if isPrime(n) else 'No')
         
