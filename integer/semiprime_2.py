@@ -21,9 +21,8 @@ def is_semiprime(n):
 for i in range(1100):
     if is_semiprime(i):
         if i == 1027:
-            print(str(i) + '　<- 優希の誕生日！')
+            print(str(i) + ' <- 優希の誕生日')
         else:
             print(i)
-    # if is_prime(i):
-    #     print(i)
-    
+
+

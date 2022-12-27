@@ -8,7 +8,7 @@ from typing import Generic, Iterable, Iterator, TypeVar, Union, List
 
 # sys.setrecursionlimit(10**7)
 # mod = 1000000007
-# mod = 998244353
+mod = 998244353
 
 def ii(): return int(input())
 def mi(): return map(int, input().split())
@@ -16,3 +16,9 @@ def lmi(): return list(mi())
 def ls(): return list(input())
 def li(): return list(map(int, str(input())))
 
+n, m = mi()
+
+dp = [[0] * m for _ in range(n)]
+
+dp[0]= [1] * m
+print(dp)

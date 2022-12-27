@@ -768,6 +768,3 @@ for f in range(1,min(H,W)+1):
     plus = min(plus,tmp)
 
 print(res+plus)
-
-    
-
